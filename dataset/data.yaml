@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+names: ['bus', 'car', 'motorbike']
+
+roboflow:
+  workspace: ariqbasyar2-gmail-com
+  project: bus-car-motorcycle
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/ariqbasyar2-gmail-com/bus-car-motorcycle/dataset/1

@@ -1,0 +1,43 @@
+================================================================================
+     ĐỒ ÁN MÔN HỌC: XỬ LÝ ẢNH SỐ (HUIT)
+     ĐỀ TÀI: NHẬN DIỆN VÀ ĐẾM PHƯƠNG TIỆN GIAO THÔNG (YOLOv8 + BYTETRACK)
+================================================================================
+
+1. YÊU CẦU MÔI TRƯỜNG:
+   - Python: 3.10, 3.11 hoặc 3.12 (khuyến nghị 64-bit)
+   - Cài đặt thư viện cần thiết bằng lệnh:
+     pip install -r requirements.txt
+
+2. HƯỚNG DẪN CHẠY CHƯƠNG TRÌNH ĐẾM XE:
+   - Mở Terminal / PowerShell tại thư mục này và gõ:
+     python counter.py
+
+   - Chương trình sẽ tự động hiển thị Menu để chọn video:
+     [1] v01.mp4
+     [2] v02.mp4
+     [3] v03.mp4
+     [4] v04.mp4
+     [A] Chạy tất cả các video trên (Batch processing)
+
+   - Hoặc có thể truyền trực tiếp số video:
+     python counter.py 1       (Chạy video 1)
+     python counter.py 3       (Chạy video 3)
+     python counter.py all     (Chạy toàn bộ video)
+
+3. KẾT QUẢ ĐẦU RA:
+   - Các video kết quả kèm vạch đếm, khung nhận diện và bảng thống kê số lượng
+     xe sẽ được lưu với tiền tố output_*.mp4.
+   - Thư mục 'outputs/' đã có sẵn một số video mẫu đã chạy hoàn chỉnh.
+
+4. CẤU TRÚC THƯ MỤC:
+   - counter.py           : File chương trình chính (nhận diện & đếm xe)
+   - train.py             : File mã nguồn huấn luyện mô hình YOLOv8
+   - test_yolo.py         : File test thử mô hình cơ bản
+   - custom_bytetrack.yaml: Cấu hình thuật toán ByteTrack
+   - requirements.txt     : Danh sách thư viện phụ thuộc
+   - dataset/             : Tập dữ liệu ảnh & nhãn (data.yaml)
+   - videos/              : Video kiểm thử đầu vào
+   - runs/                : Mô hình đã huấn luyện (runs/vehicle_yolov8n/weights/best.pt)
+                            và các biểu đồ đánh giá (results.png, confusion_matrix.png,...)
+   - outputs/             : Video kết quả mẫu đã chạy xong
+================================================================================
